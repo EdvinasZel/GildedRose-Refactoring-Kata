@@ -6,19 +6,24 @@ namespace GildedRose;
 
 final class GildedRose
 {
-    /**
-     * @var Item[]
-     */
-    private $items;
+    public $name='';
+    public $quality='';
+    public $sell_in='';
 
-    public function __construct(array $items)
+    public function __construct($name, $quality, $sell_in)
     {
-        $this->items = $items;
+        $this->name = $name;
+        $this->quality = $quality;
+        $this->sell_in = $sell_in;
     }
 
-    public function updateQuality(): void
+    public static function type($name, $quality, $sell_in)
     {
-        foreach ($this->items as $item) {
+        return new static ($name, $quality, $sell_in);
+    }
+
+    public function updateQuality($item): void
+    {
             if ($item->name != 'Aged Brie' and $item->name != 'Backstage passes to a TAFKAL80ETC concert') {
                 if ($item->quality > 0) {
                     if ($item->name != 'Sulfuras, Hand of Ragnaros') {
@@ -64,6 +69,6 @@ final class GildedRose
                     }
                 }
             }
-        }
+
     }
 }
