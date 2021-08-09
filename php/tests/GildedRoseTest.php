@@ -117,6 +117,23 @@ class GildedRoseTest extends TestCase
         $this->assertEquals($item->quality, 0);
         $this->assertEquals($item->sell_in, -6);
     }
-    
+    //Sulfuras tests
+    public function test_sulfuras_on_sell_in_date()
+    {
+        $item = GildedRose::type('Sulfuras, Hand of Ragnaros', 10, 0);
+        $item->updateQuality($item);
+
+        $this->assertEquals($item->quality, 10);
+        $this->assertEquals($item->sell_in, 0);
+    }
+    public function test_sulfuras_after_sell_in_date()
+    {
+        $item = GildedRose::type('Sulfuras, Hand of Ragnaros', 10, -1);
+        $item->updateQuality($item);
+
+        $this->assertEquals($item->quality, 10);
+        $this->assertEquals($item->sell_in, -1);
+    }
+
 
 }
