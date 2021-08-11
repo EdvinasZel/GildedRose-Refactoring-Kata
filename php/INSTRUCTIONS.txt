@@ -13,6 +13,6 @@ open up terminal and go to the folder you've cloned the repository
 navigate to - [your folder name]\GildedRose-Refactoring-Kata\php
 run command - composer test
 
-NOTE" please make sure you have composer intalled in the php directory, if any problem occurs in the same folder type in command - composer install
+NOTE" please make sure you have composer installed in the php directory, if any problem occurs in the same folder type in command - composer install
 
 Thank you!
