@@ -1,18 +1,20 @@
 
 KILO.HEALTH application task part no. 1 by Edvinas Želnys
 
-what I did is written some tests and refactored the code as it was said in the project requirements. The rule to not alter the "Item" class was a really unfortunate as
-without any changes to the class I was not able to refactor the code as I would've liked, or just could't think of a way to do it.
+what I did is written some tests and refactored the code as it was said in the project requirements.
 
-What i did was implement tests to basically see if every rule in the requirements apply as it should. Changed, the updateQuality() function to make it easier to
-understand, read, alter or add to it, also changes to the object was made to take one item at a time and not the whole array, for simplicity. Function type() was
-added to return the desired item for testing.
+UPDATE:
+"GildedRose.php" now only has the type function that basically directs any data to the correct class accoding to the item name.
+"Item.php" has your usuall constructor and updateQuality() function for regular items
+Every other Item class (AgedBrie, Backstage, Conjured, Sulfuras) now inherits the parent Item class. This allows the classes to be
+neat and tidy as only updateQuality() functions with the iternal logic are required.
+This makes adding/deleting new Items an ease.
 
 HOW TO RUN:
 open up terminal and go to the folder you've cloned the repository
 navigate to - [your folder name]\GildedRose-Refactoring-Kata\php
 run command - composer test
 
-NOTE" please make sure you have composer installed in the php directory, if any problem occurs in the same folder type in command - composer install
+NOTE: please make sure you have composer installed in the php directory, if any problem occurs in the same folder type in command - composer install
 
 Thank you!
